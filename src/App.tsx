@@ -7,44 +7,22 @@ import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import useMousePosition, { Cursor } from "./utils/useMousePosition";
+import { Cursor } from "./utils/useMousePosition";
+import { useAppContext } from "./components/ContextApi.tsx/ContextApi";
 
 function App() {
-  const { setCursorVariant, cursorVariant } = useMousePosition();
-
-  const handleMouseOverBg = () => setCursorVariant("footer");
-  const handleMouseLeave = () => setCursorVariant("default");
-  const handleMouseOverText = () => setCursorVariant("text");
-  const handleMouseOverImage = () => {
-    setCursorVariant("image");
-  };
+  const { cursorVariant } = useAppContext() ?? {};
   return (
     <>
       <div>
         <Navbar />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                handleMouseOverText={handleMouseOverText}
-                handleMouseOverImage={handleMouseOverImage}
-                handleMouseLeave={handleMouseLeave}
-              />
-            }
-          />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {location.pathname === "/contact" ? (
-          <></>
-        ) : (
-          <Footer
-            handleMouseOverBg={handleMouseOverBg}
-            handleMouseLeave={handleMouseLeave}
-          />
-        )}
+        {location.pathname === "/contact" ? <></> : <Footer />}
         <Cursor cursorVariant={cursorVariant} />
       </div>
     </>

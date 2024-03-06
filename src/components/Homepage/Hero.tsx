@@ -6,18 +6,14 @@ import Tony from "../../assets/Cregital-TEF.jpg";
 import Heirs from "../../assets/heirs-holdings.jpg";
 import Ark from "../../assets/ARK-Acts-of-Random-Kindness.svg";
 import Zenith from "../../assets/Zenith-HQ.jpg";
+import { useAppContext } from "../ContextApi.tsx/ContextApi";
 
-interface Cursor {
-  handleMouseLeave?: any;
-  handleMouseOverText?: any;
-  handleMouseOverImage?: any;
-}
+const Hero = () => {
+  const context = useAppContext();
+  const handleMouseLeave = context?.handleMouseLeave;
+  const handleMouseOverText = context?.handleMouseOverText;
+  const handleMouseOverImage = context?.handleMouseOverImage;
 
-const Hero: React.FC<Cursor> = ({
-  handleMouseLeave,
-  handleMouseOverText,
-  handleMouseOverImage,
-}) => {
   const project = [
     {
       imgs: FBN,
@@ -71,18 +67,26 @@ const Hero: React.FC<Cursor> = ({
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full">
+      <div className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col">
           <aside className="text-center lg:w-[75%]">
             <div>
               <h1
-                onMouseEnter={() => handleMouseOverText()}
-                onMouseLeave={() => handleMouseLeave()}
+                onMouseEnter={() =>
+                  handleMouseOverText && handleMouseOverText()
+                }
+                onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
                 className="font-semibold lg:text-8xl md:text-5xl text-3xl lg:leading-[7rem] mb-6 text-[#000000]"
               >
                 Cregital designs & builds digital experiences
               </h1>
-              <p className="text-2xl">
+              <p
+                onMouseEnter={() =>
+                  handleMouseOverText && handleMouseOverText()
+                }
+                onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                className="text-2xl"
+              >
                 We design, build and launch websites and products that are
                 simple, beautiful and helps businesses grow.
               </p>
@@ -93,8 +97,10 @@ const Hero: React.FC<Cursor> = ({
               <div
                 key={i}
                 className=" z-[1] cursor-pointer"
-                onMouseEnter={() => handleMouseOverImage()}
-                onMouseLeave={() => handleMouseLeave()}
+                onMouseEnter={() =>
+                  handleMouseOverImage && handleMouseOverImage()
+                }
+                onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
               >
                 <a href={item.lin} target="_blank">
                   <img src={item.imgs} alt={item.company} />
