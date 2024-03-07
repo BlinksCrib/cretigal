@@ -22,7 +22,7 @@ const WhoWeAre = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center flex-col lg:max-w-[1140px] w-[90%] lg:pt-[8rem] pt-[4rem]">
+        <div className="flex justify-center items-center flex-col lg:max-w-[1140px] w-[90%] 2xl:pt-[11rem] lg:pt-[8rem] pt-[4rem]">
           <aside data-aos="fade-up" className="flex flex-col w-full">
             <div>
               <h1
@@ -42,7 +42,7 @@ const WhoWeAre = () => {
                     handleMouseOverText && handleMouseOverText()
                   }
                   onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
+                  className="font-light md:text-2xl 2xl:text-xl lg:leading-[3rem] leading-[2rem]"
                 >
                   We are designers, developers, writers, thinkers, and problem
                   solvers. Small enough to be simple and fast, but big enough to
@@ -99,7 +99,7 @@ const WhoWeAre = () => {
               </aside>
             </div>
           </aside>
-          <aside data-aos="fade-up" className="w-full mt-[4rem] mb-[4rem]">
+          <aside data-aos="fade-up" className="w-full mt-[4rem] mb-[4rem] 2xl:mb-[7rem]">
             <img
               src={Masonry}
               alt="Masonry"

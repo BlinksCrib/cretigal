@@ -78,11 +78,11 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col">
+      <div className="flex justify-center items-center w-full bg-[#ffffff] border">
+        <div className="flex justify-center items-center text-center xl:max-w-[1140px] w-[90%] flex-col">
           <aside
             data-aos="fade-up"
-            className="text-center md:max-w-[768px] sm:min-h-screen flex justify-center items-center sm:pt-0 pt-[4rem]"
+            className="text-center md:max-w-[768px] 2xl:max-w-[1140px] h-night flex justify-center items-center sm:pt-0 llg:pt-[4rem] border"
           >
             <div>
               <h1
@@ -90,7 +90,7 @@ const Hero = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="font-semibold lg:text-8xl sm:text-5xl text-3xl lg:leading-[7rem] sm:leading-[4rem] mb-6 text-[#000000]"
+                className="font-semibold lg:text-8xl 2xl:text-[8.5rem] 2xl:leading-[9rem] sm:text-5xl text-3xl lg:leading-[7rem] sm:leading-[4rem] mb-6 text-[#000000]"
               >
                 Cregital designs & builds digital experiences
               </h1>
@@ -99,14 +99,14 @@ const Hero = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="text-2xl"
+                className="text-3xl text-light"
               >
                 We design, build and launch websites and products that are
                 simple, beautiful and helps businesses grow.
               </p>
             </div>
           </aside>
-          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center text-start w-full llg:mt-[3rem]">
+          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] 2xl:gap-[9rem] justify-between items-center text-start w-full llg:mt-[3rem]">
             {project?.map((item, i) => (
               <div
                 data-aos="fade-up"
@@ -124,7 +124,7 @@ const Hero = () => {
                       alt={item.company}
                       className="w-full object-cover object-center"
                     />
-                    <h1 className="text-start font-bold text-3xl md:mt-8 mt-4">
+                    <h1 className="text-start font-bold text-3xl 2xl:text-2xl 2xl:mt-6 2xl:mb-2 md:mt-8 mt-4">
                       {item.company}
                     </h1>
                     <p className="text-start mt-2 font-light">{item.did}</p>

@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`flex justify-center items-center w-full py-[2rem]  ${
+        className={`flex justify-center items-center w-full h-[5rem]  ${
           isMenuClicked
             ? "overflow-hidden fixed z-[1000] bg-[#000000]"
             : `${
