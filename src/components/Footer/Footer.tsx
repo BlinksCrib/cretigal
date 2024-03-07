@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
+import AOS from "aos";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,9 +11,18 @@ const Footer = () => {
   const handleMouseOverBg = context?.handleMouseOverBg;
   const handleMouseOverLink = context?.handleMouseOverLink;
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
+
   return (
     <section>
       <div
+        data-aos="fade-up"
         onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#000000] text-[#ffffff]"
@@ -47,7 +58,9 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
+                    onMouseLeave={() =>
+                      handleMouseOverText && handleMouseOverText()
+                    }
                   >
                     hello@cretigal.com
                   </a>{" "}
@@ -60,7 +73,9 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
+                    onMouseLeave={() =>
+                      handleMouseOverText && handleMouseOverText()
+                    }
                   >
                     Cregital brochure.pdf
                   </a>{" "}
@@ -68,7 +83,9 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverText && handleMouseOverText()
                     }
-                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+                    onMouseLeave={() =>
+                      handleMouseOverBg && handleMouseOverBg()
+                    }
                     className="text-[#4d4d4d]"
                   >
                     (5mb)
@@ -99,12 +116,14 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+                    onMouseLeave={() =>
+                      handleMouseOverBg && handleMouseOverBg()
+                    }
                   >
                     Instagram
                   </a>
                 </li>
-                <li className="px-8">
+                <li className="md:px-8 px-4">
                   <a
                     href="https://twitter.com/cregital"
                     target="_blank"
@@ -112,7 +131,9 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+                    onMouseLeave={() =>
+                      handleMouseOverBg && handleMouseOverBg()
+                    }
                   >
                     Twitter
                   </a>
@@ -125,7 +146,9 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+                    onMouseLeave={() =>
+                      handleMouseOverBg && handleMouseOverBg()
+                    }
                   >
                     Linkedin
                   </a>

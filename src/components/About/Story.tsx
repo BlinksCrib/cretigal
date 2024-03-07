@@ -1,5 +1,7 @@
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
 import AboutCollage1 from "../../assets/AboutCollage1.jpg";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const Story = () => {
   const context = useAppContext();
@@ -7,11 +9,19 @@ const Story = () => {
   const handleMouseOverText = context?.handleMouseOverText;
   const handleMouseOverLink = context?.handleMouseOverLink;
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
+
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem] pb-[6rem]">
-          <aside className="flex flex-col w-full">
+          <aside data-aos="fade-up" className="flex flex-col w-full">
             <div>
               <h1
                 onMouseEnter={() =>
@@ -23,7 +33,7 @@ const Story = () => {
                 Our Story
               </h1>
             </div>
-            <div className="flex lg:w-[70%] lg:self-end">
+            <div data-aos="fade-up" className="flex lg:w-[70%] lg:self-end">
               <aside className=" w-full">
                 <p
                   onMouseEnter={() =>
@@ -40,7 +50,9 @@ const Story = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
+                    onMouseLeave={() =>
+                      handleMouseOverText && handleMouseOverText()
+                    }
                   >
                     Evans Akanno
                   </a>
@@ -52,6 +64,7 @@ const Story = () => {
                 </p>
 
                 <p
+                  data-aos="fade-up"
                   onMouseEnter={() =>
                     handleMouseOverText && handleMouseOverText()
                   }
@@ -67,7 +80,9 @@ const Story = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
+                    onMouseLeave={() =>
+                      handleMouseOverText && handleMouseOverText()
+                    }
                   >
                     ARK
                   </a>{" "}
@@ -82,7 +97,9 @@ const Story = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
+                    onMouseLeave={() =>
+                      handleMouseOverText && handleMouseOverText()
+                    }
                   >
                     Disha
                   </a>
@@ -91,7 +108,7 @@ const Story = () => {
               </aside>
             </div>
           </aside>
-          <aside className="w-full mt-[5rem]">
+          <aside data-aos="fade-up" className="w-full mt-[5rem]">
             <img
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}

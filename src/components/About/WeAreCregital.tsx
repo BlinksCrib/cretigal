@@ -1,16 +1,26 @@
+import { useEffect } from "react";
 import AboutCollage from "../../assets/AboutCollage.jpg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
+import AOS from "aos"
 
 const WeAreCregital = () => {
   const context = useAppContext();
   const handleMouseLeave = context?.handleMouseLeave;
   const handleMouseOverText = context?.handleMouseOverText;
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
+
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem]">
-          <aside className="text-center lg:w-[75%] flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col lg:pt-[6rem] llg:pt-[4rem]">
+          <aside data-aos="fade-up" className="text-center lg:w-[75%] flex justify-center items-center flex-col">
             <h1
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
@@ -21,21 +31,21 @@ const WeAreCregital = () => {
             <h4
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="text-[#DEDEDE] font-bold lg:text-7xl mb-[3rem]"
+              className="text-[#DEDEDE] font-bold lg:text-7xl sm:mb-[3rem] mb-[2rem]"
             >
               /kree.ji.tl/
             </h4>
             <p
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="text-2xl"
+              className="sm:text-2xl lmd:leading-[2.2rem]"
             >
               We are a digital agency passionate about using innovation, design,
               technology and strategy to build engaging websites, brands, and
               digital products.
             </p>
           </aside>
-          <aside className="w-full mt-[5rem]">
+          <aside data-aos="fade-up" className="w-full mt-[5rem]">
             <img
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}

@@ -8,11 +8,22 @@ import Ark from "../../assets/ARK-Acts-of-Random-Kindness.svg";
 import Zenith from "../../assets/Zenith-HQ.jpg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
 
+import AOS from "aos";
+import { useEffect } from "react";
+
 const Hero = () => {
   const context = useAppContext();
   const handleMouseLeave = context?.handleMouseLeave;
   const handleMouseOverText = context?.handleMouseOverText;
   const handleMouseOverImage = context?.handleMouseOverImage;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
 
   const project = [
     {
@@ -68,15 +79,18 @@ const Hero = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col">
-          <aside className="text-center lg:w-[75%]">
+        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col llg:pt-[4rem]">
+          <aside
+            data-aos="fade-up"
+            className="text-center md:w-[75%] sm:w-[80%]"
+          >
             <div>
               <h1
                 onMouseEnter={() =>
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="font-semibold lg:text-8xl md:text-5xl text-3xl lg:leading-[7rem] mb-6 text-[#000000]"
+                className="font-semibold lg:text-8xl sm:text-5xl text-3xl lg:leading-[7rem] sm:leading-[4rem] mb-6 text-[#000000]"
               >
                 Cregital designs & builds digital experiences
               </h1>
@@ -95,20 +109,27 @@ const Hero = () => {
           <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center w-full llg:mt-[3rem]">
             {project?.map((item, i) => (
               <div
+                data-aos="fade-up"
                 key={i}
-                className=" z-[1] cursor-pointer"
+                className="z-[1] cursor-pointer"
                 onMouseEnter={() =>
                   handleMouseOverImage && handleMouseOverImage()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
               >
-                <a href={item.lin} target="_blank">
-                  <img src={item.imgs} alt={item.company} />
-                  <h1 className="font-bold text-3xl md:mt-8 mt-4">
-                    {item.company}
-                  </h1>
-                  <p className="mt-2 font-light">{item.did}</p>
-                </a>
+                <button className="w-full" type="submit">
+                  <a href={item.lin} target="_blank">
+                    <img
+                      src={item.imgs}
+                      alt={item.company}
+                      className="w-full object-cover object-center"
+                    />
+                    <h1 className="font-bold text-3xl md:mt-8 mt-4">
+                      {item.company}
+                    </h1>
+                    <p className="mt-2 font-light">{item.did}</p>
+                  </a>
+                </button>
               </div>
             ))}
           </aside>

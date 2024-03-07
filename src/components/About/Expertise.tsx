@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
+
+import AOS from "aos"
 
 const Expertise = () => {
   const context = useAppContext();
@@ -20,6 +23,15 @@ const Expertise = () => {
     "E-commerce",
     "Data & Analytics",
   ];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
+
   return (
     <section>
       <div
@@ -28,7 +40,7 @@ const Expertise = () => {
         className="flex justify-center items-center w-full bg-[#000000] text-[#ffffff]"
       >
         <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem] pb-[8rem]">
-          <aside className="flex flex-col w-full">
+          <aside data-aos="fade-up" className="flex flex-col w-full">
             <div className="inline-block">
               <h1
                 onMouseEnter={() =>
@@ -40,7 +52,7 @@ const Expertise = () => {
                 Our expertise
               </h1>
             </div>
-            <div className="flex lg:w-[70%] lg:self-end">
+            <div data-aos="fade-up" className="flex lg:w-[70%] lg:self-end">
               <aside className=" w-full">
                 <p
                   onMouseEnter={() =>
@@ -55,7 +67,7 @@ const Expertise = () => {
                   needs of our clients. Our capabilities cover the following
                   areas;
                 </p>
-                <div className="mt-[2rem]">
+                <div data-aos="fade-up" className="mt-[2rem]">
                   {skills?.map((item, i) => (
                     <p
                       onMouseEnter={() =>

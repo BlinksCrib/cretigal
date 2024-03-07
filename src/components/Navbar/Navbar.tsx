@@ -15,19 +15,6 @@ const Navbar = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  // const [isSmallScreen, setIsSmallScreen] = useState(window.matchMedia("(max-width: 768px)").matches);
-
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia("(max-width: 768px)");
-  //   const handleScreenChange = (e: any) => setIsSmallScreen(e.matches);
-
-  //   mediaQuery.addListener(handleScreenChange);
-
-  //   return () => {
-  //     mediaQuery.removeListener(handleScreenChange);
-  //   };
-  // }, []);
-
   const handleMouseNav = () => {
     if (isMenuClicked) {
       handleMouseOverBg && handleMouseOverBg();
@@ -41,17 +28,15 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        // onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
-        // onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-        className={`flex justify-center items-center w-full h-[5rem] ${
+        className={`flex justify-center items-center w-full h-[5rem]  ${
           isMenuClicked
             ? "overflow-hidden fixed z-[1000] bg-[#000000]"
-            : "bg-[#ffffff]"
-        }`}
+            : `${location.pathname === "/contact" ? "bg-[#000000]" : "bg-[#ffffff]"}`
+        } `}
       >
         <div className="flex justify-between items-center w-[90%]">
           <div className="bg-[#000000]">
-            <Link to="/">
+            <Link to="/" onClick={() => setIsMenuClicked(false)}>
               <img
                 onMouseEnter={() => handleMouseNav()}
                 onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
@@ -62,7 +47,7 @@ const Navbar = () => {
           </div>
           <aside
             className={`flex justify-center items-center font-medium text-lg ${
-              isMenuClicked ? "text-[#ffffff]" : "text-[#000000]"
+              isMenuClicked ? "text-[#ffffff]" : `${location.pathname !== "/contact" ? "text-[#000000]" : "text-[#ffffff]"}`
             }`}
             onClick={updateMenu}
           >
@@ -72,7 +57,7 @@ const Navbar = () => {
               className={`fa-solid ${isMenuClicked ? "fa-times" : "fa-bars"}`}
             ></i>
             <h4
-              className="ml-4"
+              className="md:ml-4 ml-2"
               onMouseEnter={() => handleMouseNav()}
               onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
             >
@@ -84,12 +69,12 @@ const Navbar = () => {
           <div
             onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
             // onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-            className="fixed flex justify-center items-start w-full ease-in-out duration-500 bg-[#000000] nav-height top-0 z-[100] mt-[5rem]"
+            className="fixed flex justify-center items-start w-full ease-in-out duration-500 bg-[#000000] nav-height top-0 z-[100] mt-[5rem] overflow-hidden"
           >
             <h1
               onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
               // onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="text-[#ffffff] lg:text-6xl lg:w-[75%] lg:leading-[5rem] text-center font-extrabold pt-[2rem]"
+              className="text-[#ffffff] lg:text-6xl sm:text-4xl text-3xl sm:w-[75%] w-[90%] lg:leading-[5rem] sm:leading-[3rem] text-center font-extrabold pt-[2rem]"
             >
               Learn more{" "}
               <Link

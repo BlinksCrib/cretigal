@@ -11,6 +11,11 @@ import { Cursor } from "./utils/useMousePosition";
 import { useAppContext } from "./components/ContextApi.tsx/ContextApi";
 import WriteIcon from "./utils/WriteIcon";
 
+import "aos/dist/aos.css";
+
+
+
+
 function App() {
   const { cursorVariant } = useAppContext() ?? {};
   return (
@@ -25,7 +30,7 @@ function App() {
         </Routes>
         {window.innerWidth >= 992 && <WriteIcon />}
         {location.pathname === "/contact" ? <></> : <Footer />}
-        <Cursor cursorVariant={cursorVariant} />
+        {window.innerWidth >= 992 && <Cursor cursorVariant={cursorVariant} />}
       </div>
     </>
   );

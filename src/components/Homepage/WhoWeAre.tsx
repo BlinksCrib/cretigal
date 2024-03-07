@@ -1,18 +1,29 @@
 import { Link } from "react-router-dom";
 import Masonry from "../../assets/Masonry.jpg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
+import AOS from "aos";
+import { useEffect } from "react";
+
 
 const WhoWeAre = () => {
   const context = useAppContext();
   const handleMouseLeave = context?.handleMouseLeave;
   const handleMouseOverText = context?.handleMouseOverText;
   const handleMouseOverLink = context?.handleMouseOverLink;
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
 
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center flex-col lg:w-[85%] w-[90%] lg:pt-[8rem] pt-[4rem]">
-          <aside className="flex flex-col w-full">
+          <aside data-aos="fade-up" className="flex flex-col w-full">
             <div>
               <h1
                 onMouseEnter={() =>
@@ -24,7 +35,7 @@ const WhoWeAre = () => {
                 Who we are
               </h1>
             </div>
-            <div className="flex lg:w-[70%] lg:self-end">
+            <div data-aos="fade-up" className="flex lg:w-[70%] lg:self-end">
               <aside className=" w-full">
                 <p
                   onMouseEnter={() =>
@@ -88,7 +99,7 @@ const WhoWeAre = () => {
               </aside>
             </div>
           </aside>
-          <aside className="w-full mt-[4rem] mb-[4rem]">
+          <aside data-aos="fade-up" className="w-full mt-[4rem] mb-[4rem]">
             <img
               src={Masonry}
               alt="Masonry"

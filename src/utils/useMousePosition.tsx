@@ -42,7 +42,8 @@ export const Cursor: React.FC<cursor> = ({ cursorVariant }) => {
       y: mousePosition.y - 16,
       backgroundColor: "#000000",
       color: "#ffffff",
-      cursor: "default", // Set default cursor color to black
+      cursor: "none", // Set default cursor color to black
+      // pointerEvents: "none"
     },
     text: {
       height: 32,
@@ -74,7 +75,8 @@ export const Cursor: React.FC<cursor> = ({ cursorVariant }) => {
       alignItems: "center",
       color: "#ffffff", // Text color
       fontSize: "12px", // Font size
-      cursor: "pointer",
+      cursor: "none",
+      // pointerEvents: "auto",
     },
     footer: {
       height: 32,

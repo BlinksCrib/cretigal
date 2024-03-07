@@ -7,12 +7,22 @@ import Heirs from "../../assets/heirs-holdings.jpg";
 import Ark from "../../assets/ARK-Acts-of-Random-Kindness.svg";
 import Zenith from "../../assets/Zenith-HQ.jpg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
+import { useEffect } from "react";
+import AOS from "aos";
 
 const Projects = () => {
   const context = useAppContext();
   const handleMouseLeave = context?.handleMouseLeave;
   const handleMouseOverText = context?.handleMouseOverText;
   const handleMouseOverImage = context?.handleMouseOverImage;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+    AOS.refresh(); // Refresh AOS animations when data changes
+  }, []);
 
   const project = [
     {
@@ -68,8 +78,8 @@ const Projects = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem]">
-          <aside className="text-center lg:w-[75%] flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col lg:pt-[6rem] pt-[4rem]">
+          <aside data-aos="fade-up" className="text-center lg:w-[75%] flex justify-center items-center flex-col">
             <h1
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
@@ -80,7 +90,7 @@ const Projects = () => {
             <p
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="text-2xl"
+              className="lg:text-2xl lmd:leading-[2.2rem]"
             >
               We have been working on a variety of projects and across different
               industries across disciplines, making our work an appropriate,
@@ -91,15 +101,16 @@ const Projects = () => {
           <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center w-full llg:mt-[3rem] mt-[6rem] mb-[5rem]">
             {project?.map((item, i) => (
               <div
+              data-aos="fade-up"
                 key={i}
-                className=""
+                className="hover:cursor-pointer hover:pointer-events-auto all-proj"
                 onMouseEnter={() =>
                   handleMouseOverImage && handleMouseOverImage()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
               >
                 <a href={item.lin} target="_blank">
-                  <img src={item.imgs} alt={item.company} />
+                  <img src={item.imgs} alt={item.company} className="w-full object-cover object-center" />
                   <h1 className="font-bold text-3xl md:mt-8 mt-4">
                     {item.company}
                   </h1>
