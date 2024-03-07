@@ -23,6 +23,9 @@ export default {
         lg: '992px',
         xl: '1200px',
         '2xl': '1440px',
+        '3xl': '1600px',
+        '4xl': [{max: '2000px'}],
+        '6xl': '2800px',
       },
       fontFamily: {
         'Ubuntu': ['Ubuntu', 'sans-serif'],

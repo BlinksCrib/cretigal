@@ -1,5 +1,5 @@
 import { useState } from "react";
-import cretigal from "../../assets/Cregital.svg";
+// import cretigal from "../../assets/Cregital.svg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
 import { Link } from "react-router-dom";
 
@@ -28,26 +28,44 @@ const Navbar = () => {
   return (
     <header>
       <nav
-        className={`flex justify-center items-center w-full h-[5rem]  ${
+        className={`flex justify-center items-center w-full py-[2rem]  ${
           isMenuClicked
             ? "overflow-hidden fixed z-[1000] bg-[#000000]"
-            : `${location.pathname === "/contact" ? "bg-[#000000]" : "bg-[#ffffff]"}`
+            : `${
+                location.pathname === "/contact"
+                  ? "bg-[#000000]"
+                  : "bg-[#ffffff]"
+              }`
         } `}
       >
         <div className="flex justify-between items-center w-[90%]">
-          <div className="bg-[#000000]">
-            <Link to="/" onClick={() => setIsMenuClicked(false)}>
+          <div
+            onMouseEnter={() => handleMouseNav()}
+            onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+            className="lg:w-[40px] w-[30px] h-full bg-clip-content"
+          >
+            <Link
+              className="w-full"
+              to="/"
+              onClick={() => setIsMenuClicked(false)}
+            >
               <img
-                onMouseEnter={() => handleMouseNav()}
-                onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
-                src={cretigal}
+                // src={cretigal}
+                src="https://cregital.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FScreenshot%202023-09-12%20144059.b63f0495.png&w=64&q=75"
                 alt="cretigal logo"
+                className="w-full h-full bg-transparent bg-clip-content"
               />{" "}
             </Link>
           </div>
           <aside
             className={`flex justify-center items-center font-medium text-lg ${
-              isMenuClicked ? "text-[#ffffff]" : `${location.pathname !== "/contact" ? "text-[#000000]" : "text-[#ffffff]"}`
+              isMenuClicked
+                ? "text-[#ffffff]"
+                : `${
+                    location.pathname !== "/contact"
+                      ? "text-[#000000]"
+                      : "text-[#ffffff]"
+                  }`
             }`}
             onClick={updateMenu}
           >

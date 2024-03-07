@@ -39,7 +39,7 @@ const Expertise = () => {
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#000000] text-[#ffffff]"
       >
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem] pb-[8rem]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col pt-[6rem] pb-[8rem]">
           <aside data-aos="fade-up" className="flex flex-col w-full">
             <div className="inline-block">
               <h1

@@ -79,10 +79,10 @@ const Hero = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col llg:pt-[4rem]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col">
           <aside
             data-aos="fade-up"
-            className="text-center md:w-[75%] sm:w-[80%]"
+            className="text-center md:max-w-[768px] sm:min-h-screen flex justify-center items-center sm:pt-0 pt-[4rem]"
           >
             <div>
               <h1
@@ -106,7 +106,7 @@ const Hero = () => {
               </p>
             </div>
           </aside>
-          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center w-full llg:mt-[3rem]">
+          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center text-start w-full llg:mt-[3rem]">
             {project?.map((item, i) => (
               <div
                 data-aos="fade-up"
@@ -124,10 +124,10 @@ const Hero = () => {
                       alt={item.company}
                       className="w-full object-cover object-center"
                     />
-                    <h1 className="font-bold text-3xl md:mt-8 mt-4">
+                    <h1 className="text-start font-bold text-3xl md:mt-8 mt-4">
                       {item.company}
                     </h1>
-                    <p className="mt-2 font-light">{item.did}</p>
+                    <p className="text-start mt-2 font-light">{item.did}</p>
                   </a>
                 </button>
               </div>

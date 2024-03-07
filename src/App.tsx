@@ -13,9 +13,6 @@ import WriteIcon from "./utils/WriteIcon";
 
 import "aos/dist/aos.css";
 
-
-
-
 function App() {
   const { cursorVariant } = useAppContext() ?? {};
   return (

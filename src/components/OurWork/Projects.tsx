@@ -78,7 +78,7 @@ const Projects = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col lg:pt-[6rem] pt-[4rem]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col lg:pt-[6rem] pt-[4rem]">
           <aside data-aos="fade-up" className="text-center lg:w-[75%] flex justify-center items-center flex-col">
             <h1
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}

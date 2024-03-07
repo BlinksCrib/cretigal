@@ -27,7 +27,7 @@ const Footer = () => {
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#000000] text-[#ffffff]"
       >
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[4rem]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col pt-[4rem]">
           <aside className="flex flex-col w-full pb-[6rem]">
             <div>
               <h1

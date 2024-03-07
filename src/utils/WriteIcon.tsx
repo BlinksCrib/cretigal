@@ -9,15 +9,17 @@ const WriteIcon = () => {
 
   return (
     <section>
-      <div className="fixed bottom-[30px] right-[30px] z-[1000]">
-        {/* Add your icon or content here */}
-        <img
-          onMouseEnter={() => handleMouseOverLink && handleMouseOverLink()}
-          onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-          src={contactBlackIcon}
-          alt="contact black icon"
-        />
-      </div>
+      {location.pathname !== "/contact" && (
+        <div className="fixed bottom-[30px] right-[30px] z-[1000]">
+          {/* Add your icon or content here */}
+          <img
+            onMouseEnter={() => handleMouseOverLink && handleMouseOverLink()}
+            onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+            src={contactBlackIcon}
+            alt="contact black icon"
+          />
+        </div>
+      )}
     </section>
   );
 };

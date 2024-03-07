@@ -22,7 +22,7 @@ const Form = () => {
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#000000]"
       >
-        <div className="flex justify-center items-center flex-col lg:w-[60%] md:w-[80%] w-[90%] py-[6rem]">
+        <div className="flex justify-center items-center flex-col lg:max-w-[1140px] lg:w-[60%] md:w-[80%] w-[90%] py-[6rem]">
           <div
             data-aos="fade-up"
             className="flex justify-center items-center flex-col w-full text-center mb-8"

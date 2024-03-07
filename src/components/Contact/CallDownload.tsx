@@ -7,8 +7,8 @@ const CallDownload = () => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full md:bg-[#ffffff] bg-[#000000]">
-        <div className="flex justify-center items-center lg:w-[60%] md:w-[80%] w-[90%] py-[3rem]">
+      <div className="flex justify-center items-center w-full 4xl:bg-[#ffffff] bg-[#000000]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] lg:w-[80%] w-[90%] py-[3rem]">
           <aside className="">
             <p className="text-[#ffffff] mr-2">
               {" "}

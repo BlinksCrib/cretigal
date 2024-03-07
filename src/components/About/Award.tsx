@@ -34,7 +34,7 @@ const Award = () => {
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#ffffff]"
       >
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem] md:pb-[8rem] pb-[5rem]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col pt-[6rem] md:pb-[8rem] pb-[5rem]">
           <aside data-aos="fade-up" className="flex flex-col w-full">
             <div className="inline-block">
               <h1

@@ -42,7 +42,6 @@ export const Cursor: React.FC<cursor> = ({ cursorVariant }) => {
       y: mousePosition.y - 16,
       backgroundColor: "#000000",
       color: "#ffffff",
-      cursor: "none", // Set default cursor color to black
       // pointerEvents: "none"
     },
     text: {
@@ -52,7 +51,6 @@ export const Cursor: React.FC<cursor> = ({ cursorVariant }) => {
       y: mousePosition.y - 16,
       backgroundColor: "#ffffff",
       mixBlendMode: "difference", // Adjust the type here,
-      cursor: "pointer", // Change cursor color to black on hover
     },
     link: {
       height: 80,

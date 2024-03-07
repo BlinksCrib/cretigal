@@ -22,7 +22,7 @@ const WhoWeAre = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center flex-col lg:w-[85%] w-[90%] lg:pt-[8rem] pt-[4rem]">
+        <div className="flex justify-center items-center flex-col lg:max-w-[1140px] w-[90%] lg:pt-[8rem] pt-[4rem]">
           <aside data-aos="fade-up" className="flex flex-col w-full">
             <div>
               <h1

@@ -20,7 +20,7 @@ const Story = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem] pb-[6rem]">
+        <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col pt-[6rem] pb-[6rem]">
           <aside data-aos="fade-up" className="flex flex-col w-full">
             <div>
               <h1
