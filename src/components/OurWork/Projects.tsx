@@ -6,8 +6,14 @@ import Tony from "../../assets/Cregital-TEF.jpg";
 import Heirs from "../../assets/heirs-holdings.jpg";
 import Ark from "../../assets/ARK-Acts-of-Random-Kindness.svg";
 import Zenith from "../../assets/Zenith-HQ.jpg";
+import { useAppContext } from "../ContextApi.tsx/ContextApi";
 
 const Projects = () => {
+  const context = useAppContext();
+  const handleMouseLeave = context?.handleMouseLeave;
+  const handleMouseOverText = context?.handleMouseOverText;
+  const handleMouseOverImage = context?.handleMouseOverImage;
+
   const project = [
     {
       imgs: Disha,
@@ -58,15 +64,24 @@ const Projects = () => {
       lin: "https://www.zenithbank.com/",
     },
   ];
+  
   return (
     <section>
-      <div className="flex justify-center items-center w-full">
+      <div className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem]">
           <aside className="text-center lg:w-[75%] flex justify-center items-center flex-col">
-            <h1 className="font-semibold lg:text-7xl md:text-5xl text-3xl lg:leading-[5rem] mb-6 lg:w-[50%] text-center">
+            <h1
+              onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
+              onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+              className="font-semibold lg:text-7xl md:text-5xl text-3xl lg:leading-[5rem] mb-6 lg:w-[50%]"
+            >
               Featured Projects
             </h1>
-            <p className="text-2xl">
+            <p
+              onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
+              onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+              className="text-2xl"
+            >
               We have been working on a variety of projects and across different
               industries across disciplines, making our work an appropriate,
               versatile and functional response to the unique needs of our
@@ -75,7 +90,14 @@ const Projects = () => {
           </aside>
           <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center w-full llg:mt-[3rem] mt-[6rem] mb-[5rem]">
             {project?.map((item, i) => (
-              <div key={i} className="">
+              <div
+                key={i}
+                className=""
+                onMouseEnter={() =>
+                  handleMouseOverImage && handleMouseOverImage()
+                }
+                onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+              >
                 <a href={item.lin} target="_blank">
                   <img src={item.imgs} alt={item.company} />
                   <h1 className="font-bold text-3xl md:mt-8 mt-4">

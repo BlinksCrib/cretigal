@@ -74,11 +74,15 @@ export const Cursor: React.FC<cursor> = ({ cursorVariant }) => {
       alignItems: "center",
       color: "#ffffff", // Text color
       fontSize: "12px", // Font size
-      // content: "'View'", // Display text using CSS content property
-      // pointerEvents: "visible",
-      // mixBlendMode: "difference",
-      // zIndex: 5000,
       cursor: "pointer",
+    },
+    footer: {
+      height: 32,
+      width: 32,
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: "#ffffff",
+      mixBlendMode: "difference", // Adjust the type here,
     },
   };
 

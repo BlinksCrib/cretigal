@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { Cursor } from "./utils/useMousePosition";
 import { useAppContext } from "./components/ContextApi.tsx/ContextApi";
+import WriteIcon from "./utils/WriteIcon";
 
 function App() {
   const { cursorVariant } = useAppContext() ?? {};
@@ -22,6 +23,7 @@ function App() {
           <Route path="/work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        {window.innerWidth >= 992 && <WriteIcon />}
         {location.pathname === "/contact" ? <></> : <Footer />}
         <Cursor cursorVariant={cursorVariant} />
       </div>

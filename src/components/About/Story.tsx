@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import Masonry from "../../assets/Masonry.jpg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
+import AboutCollage1 from "../../assets/AboutCollage1.jpg";
 
-const WhoWeAre = () => {
+const Story = () => {
   const context = useAppContext();
   const handleMouseLeave = context?.handleMouseLeave;
   const handleMouseOverText = context?.handleMouseOverText;
@@ -11,7 +10,7 @@ const WhoWeAre = () => {
   return (
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
-        <div className="flex justify-center items-center flex-col lg:w-[85%] w-[90%] lg:pt-[8rem] pt-[4rem]">
+        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[6rem] pb-[6rem]">
           <aside className="flex flex-col w-full">
             <div>
               <h1
@@ -21,7 +20,7 @@ const WhoWeAre = () => {
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
                 className="font-semibold lg:text-7xl text-3xl lg:mb-10 mb-6"
               >
-                Who we are
+                Our Story
               </h1>
             </div>
             <div className="flex lg:w-[70%] lg:self-end">
@@ -33,68 +32,72 @@ const WhoWeAre = () => {
                   onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
                   className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
                 >
-                  We are designers, developers, writers, thinkers, and problem
-                  solvers. Small enough to be simple and fast, but big enough to
-                  deliver your project scope at the pace you need. You can learn
-                  more{" "}
-                  <Link
-                    to="/about"
+                  Cregital was formed in 2015 by our Founder & Design Lead{" "}
+                  <a
+                    href="#"
                     className="border-b border-[#000000]"
+                    rel="noopener noreferrer"
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
                   >
-                    about us
-                  </Link>
-                  , check the latest on{" "}
+                    Evans Akanno
+                  </a>
+                  , with a belief that when passionate people work together and
+                  are empowered, amazing things can happen. In these few years,
+                  Cregital has made its mark in Nigeria as well as recognised
+                  internationally for excellent work and its impact on people,
+                  small and large businesses.
+                </p>
+
+                <p
+                  onMouseEnter={() =>
+                    handleMouseOverText && handleMouseOverText()
+                  }
+                  onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                  className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem] mt-[2rem]"
+                >
+                  Outside of our client work, we enjoy giving back to the
+                  community through the{" "}
                   <a
-                    href="https://instagram.com/cregital"
+                    href="#"
+                    className="border-b border-[#000000]"
+                    rel="noopener noreferrer"
+                    onMouseEnter={() =>
+                      handleMouseOverLink && handleMouseOverLink()
+                    }
+                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
+                  >
+                    ARK
+                  </a>{" "}
+                  - Acts of Random Kindness project, and helping creators
+                  showcase their work, and grow their business faster with easy
+                  to use tools and templates with{" "}
+                  <a
+                    href="https://disha.ng/"
                     target="_blank"
                     className="border-b border-[#000000]"
                     rel="noopener noreferrer"
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
                   >
-                    Instagram
-                  </a>{" "}
-                  and{" "}
-                  <a
-                    href="https://twitter.com/cregital"
-                    className="border-b border-[#000000]"
-                    rel="noopener noreferrer"
-                    onMouseEnter={() =>
-                      handleMouseOverLink && handleMouseOverLink()
-                    }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  >
-                    Twitter
-                  </a>{" "}
-                  or apply to{" "}
-                  <Link
-                    to="/careers/"
-                    className="border-b border-[#000000]"
-                    onMouseEnter={() =>
-                      handleMouseOverLink && handleMouseOverLink()
-                    }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  >
-                    join our team
-                  </Link>
+                    Disha
+                  </a>
                   .
                 </p>
               </aside>
             </div>
           </aside>
-          <aside className="w-full mt-[4rem] mb-[4rem]">
+          <aside className="w-full mt-[5rem]">
             <img
-              src={Masonry}
-              alt="Masonry"
-              className="w-full"
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+              src={AboutCollage1}
+              alt="About collage 1"
+              className="w-full"
             />
           </aside>
         </div>
@@ -103,4 +106,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default Story;

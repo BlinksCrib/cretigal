@@ -16,22 +16,14 @@ const Footer = () => {
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#000000] text-[#ffffff]"
       >
-        <div
-          onMouseEnter={() => handleMouseOverLink && handleMouseOverLink()}
-          onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-          className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[4rem] bg-[#000000]"
-        >
-          <aside
-            onMouseEnter={() => handleMouseOverLink && handleMouseOverLink()}
-            onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-            className="flex flex-col w-full pb-[6rem]"
-          >
+        <div className="flex justify-center items-center lg:w-[85%] w-[90%] flex-col pt-[4rem]">
+          <aside className="flex flex-col w-full pb-[6rem]">
             <div>
               <h1
                 onMouseEnter={() =>
                   handleMouseOverText && handleMouseOverText()
                 }
-                onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
                 className="font-semibold lg:text-7xl text-3xl lg:mb-10 mb-6"
               >
                 Get in touch
@@ -43,7 +35,7 @@ const Footer = () => {
                   onMouseEnter={() =>
                     handleMouseOverText && handleMouseOverText()
                   }
-                  onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                  onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
                   className="font-light lg:text-2xl lg:leading-[3rem] leading-[2rem]"
                 >
                   Contact us to find out how we can help you. If it’s easier you
@@ -55,7 +47,7 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
                   >
                     hello@cretigal.com
                   </a>{" "}
@@ -68,7 +60,7 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverText && handleMouseOverText()}
                   >
                     Cregital brochure.pdf
                   </a>{" "}
@@ -76,7 +68,7 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverText && handleMouseOverText()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
                     className="text-[#4d4d4d]"
                   >
                     (5mb)
@@ -92,7 +84,7 @@ const Footer = () => {
                 onMouseEnter={() =>
                   handleMouseOverText && handleMouseOverText()
                 }
-                onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
               >
                 &copy; {year} Cregital Design Agency
               </p>
@@ -107,7 +99,7 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
                   >
                     Instagram
                   </a>
@@ -120,7 +112,7 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
                   >
                     Twitter
                   </a>
@@ -133,7 +125,7 @@ const Footer = () => {
                     onMouseEnter={() =>
                       handleMouseOverLink && handleMouseOverLink()
                     }
-                    onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
+                    onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
                   >
                     Linkedin
                   </a>
