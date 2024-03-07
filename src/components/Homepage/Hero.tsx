@@ -78,11 +78,11 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full bg-[#ffffff] border">
+      <div className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center text-center xl:max-w-[1140px] w-[90%] flex-col">
           <aside
             data-aos="fade-up"
-            className="text-center md:max-w-[768px] 2xl:max-w-[1140px] h-night flex justify-center items-center sm:pt-0 llg:pt-[4rem] border"
+            className="text-center md:max-w-[768px] 2xl:max-w-[1140px] h-night flex justify-center items-center sm:pt-0 llg:pt-[4rem]"
           >
             <div>
               <h1
@@ -106,7 +106,7 @@ const Hero = () => {
               </p>
             </div>
           </aside>
-          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] 2xl:gap-[9rem] justify-between items-center text-start w-full llg:mt-[3rem]">
+          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] 2xl:gap-[11rem] justify-between items-center text-start w-full llg:mt-[3rem]">
             {project?.map((item, i) => (
               <div
                 data-aos="fade-up"

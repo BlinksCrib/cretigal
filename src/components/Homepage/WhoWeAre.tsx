@@ -30,7 +30,7 @@ const WhoWeAre = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="font-semibold lg:text-7xl text-3xl lg:mb-10 mb-6"
+                className="font-semibold lg:text-7xl 2xl:text-9xl text-3xl lg:mb-10 mb-6"
               >
                 Who we are
               </h1>
@@ -42,7 +42,7 @@ const WhoWeAre = () => {
                     handleMouseOverText && handleMouseOverText()
                   }
                   onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  className="font-light md:text-2xl 2xl:text-xl lg:leading-[3rem] leading-[2rem]"
+                  className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
                 >
                   We are designers, developers, writers, thinkers, and problem
                   solvers. Small enough to be simple and fast, but big enough to
@@ -99,7 +99,7 @@ const WhoWeAre = () => {
               </aside>
             </div>
           </aside>
-          <aside data-aos="fade-up" className="w-full mt-[4rem] mb-[4rem] 2xl:mb-[7rem]">
+          <aside data-aos="fade-up" className="w-full 2xl:mt-[6rem] mt-[4rem] mb-[4rem] 2xl:mb-[7rem]">
             <img
               src={Masonry}
               alt="Masonry"
