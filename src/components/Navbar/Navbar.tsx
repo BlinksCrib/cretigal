@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import cretigal from "../../assets/Cregital.svg";
+import cretigal from "../../assets/Cregital.svg";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
 import { Link } from "react-router-dom";
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           <div
             onMouseEnter={() => handleMouseNav()}
             onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
-            className="lg:w-[40px] w-[30px] h-full bg-clip-content"
+            className="lg:w-[40px] w-[30px] h-full bg-clip-content blend-mode"
           >
             <Link
               className="w-full"
@@ -50,8 +50,7 @@ const Navbar = () => {
               onClick={() => setIsMenuClicked(false)}
             >
               <img
-                // src={cretigal}
-                src="https://cregital.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FScreenshot%202023-09-12%20144059.b63f0495.png&w=64&q=75"
+                src={cretigal}
                 alt="cretigal logo"
                 className="w-full h-full bg-transparent bg-clip-content"
               />{" "}
