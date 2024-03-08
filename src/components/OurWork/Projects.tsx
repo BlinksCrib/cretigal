@@ -79,18 +79,18 @@ const Projects = () => {
     <section>
       <div className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col lg:pt-[6rem] pt-[4rem]">
-          <aside data-aos="fade-up" className="text-center lg:w-[75%] flex justify-center items-center flex-col">
+          <aside data-aos="fade-up" className="text-center md:max-w-[768px] lg:w-[75%] flex justify-center items-center flex-col">
             <h1
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="font-semibold lg:text-7xl md:text-5xl text-3xl lg:leading-[5rem] mb-6 lg:w-[50%]"
+              className="font-semibold 2xl:text-8xl 2xl:leading-[6rem] lg:text-7xl md:text-5xl text-3xl lg:leading-[5rem] mb-6 lg:w-[50%]"
             >
               Featured Projects
             </h1>
             <p
               onMouseEnter={() => handleMouseOverText && handleMouseOverText()}
               onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="lg:text-2xl lmd:leading-[2.2rem]"
+              className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
             >
               We have been working on a variety of projects and across different
               industries across disciplines, making our work an appropriate,
@@ -98,7 +98,7 @@ const Projects = () => {
               clients.
             </p>
           </aside>
-          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] justify-between items-center w-full llg:mt-[3rem] mt-[6rem] mb-[5rem]">
+          <aside className="grid md:grid-cols-2 grid-cols-1 md:gap-[6rem] gap-[4rem] 2xl:gap-[11rem] justify-between items-center w-full llg:mt-[3rem] mt-[6rem] mb-[5rem]">
             {project?.map((item, i) => (
               <div
               data-aos="fade-up"
@@ -111,10 +111,10 @@ const Projects = () => {
               >
                 <a href={item.lin} target="_blank">
                   <img src={item.imgs} alt={item.company} className="w-full object-cover object-center" />
-                  <h1 className="font-bold text-3xl md:mt-8 mt-4">
+                  <h1 className="text-start font-bold text-3xl 2xl:text-2xl 2xl:mt-6 2xl:mb-2 md:mt-8 mt-4">
                     {item.company}
                   </h1>
-                  <p className="mt-2 font-light">{item.did}</p>
+                  <p className="text-start mt-2 font-light">{item.did}</p>
                 </a>
               </div>
             ))}

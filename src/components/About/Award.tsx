@@ -42,7 +42,7 @@ const Award = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="font-semibold lg:text-7xl text-3xl lg:mb-10 mb-6 "
+                className="font-semibold lg:text-7xl 2xl:text-8xl text-3xl lg:mb-10 mb-6"
               >
                 Awards & Recognition
               </h1>
@@ -54,7 +54,7 @@ const Award = () => {
                     handleMouseOverText && handleMouseOverText()
                   }
                   onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
+                  className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
                 >
                   Cregital has been featured by many industry tastemakers,
                   awards and publications. But they’re a good sign we’re going
@@ -69,7 +69,7 @@ const Award = () => {
                       onMouseLeave={() =>
                         handleMouseLeave && handleMouseLeave()
                       }
-                      className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
+                      className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
                       key={i}
                     >
                       {item}

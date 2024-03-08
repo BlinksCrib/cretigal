@@ -119,12 +119,12 @@ const Navbar = () => {
           <div
             onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
             // onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-            className="fixed flex justify-center items-start w-full ease-in-out duration-500 bg-[#000000] nav-height top-0 z-[100] mt-[5rem] overflow-hidden"
+            className="fixed flex justify-center items-start 2xl:items-center w-full ease-in-out duration-500 bg-[#000000] h-night top-0 z-[100] mt-[5rem]  overflow-hidden"
           >
             <h1
               onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
               // onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-              className="text-[#ffffff] lg:text-6xl sm:text-4xl text-3xl sm:w-[75%] w-[90%] lg:leading-[5rem] sm:leading-[3rem] text-center font-extrabold pt-[2rem]"
+              className="text-[#ffffff] lg:text-6xl sm:text-4xl text-3xl 2xl:max-w-[1140px] sm:w-[75%] w-[90%] lg:leading-[5rem] sm:leading-[3rem] text-center font-extrabold pt-[2rem]"
             >
               Learn more{" "}
               <Link

@@ -28,7 +28,7 @@ const Story = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="font-semibold lg:text-7xl text-3xl lg:mb-10 mb-6"
+                className="font-semibold lg:text-7xl 2xl:text-9xl text-3xl lg:mb-10 mb-6"
               >
                 Our Story
               </h1>
@@ -40,7 +40,7 @@ const Story = () => {
                     handleMouseOverText && handleMouseOverText()
                   }
                   onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
+                  className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
                 >
                   Cregital was formed in 2015 by our Founder & Design Lead{" "}
                   <a
@@ -69,7 +69,7 @@ const Story = () => {
                     handleMouseOverText && handleMouseOverText()
                   }
                   onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                  className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem] mt-[2rem]"
+                  className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem] mt-[2rem]"
                 >
                   Outside of our client work, we enjoy giving back to the
                   community through the{" "}

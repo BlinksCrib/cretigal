@@ -48,7 +48,7 @@ const Expertise = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
-                className="font-semibold lg:text-7xl text-3xl lg:mb-10 mb-6 "
+                className="font-semibold lg:text-7xl 2xl:text-9xl text-3xl lg:mb-10 mb-6"
               >
                 Our expertise
               </h1>
@@ -60,7 +60,7 @@ const Expertise = () => {
                     handleMouseOverText && handleMouseOverText()
                   }
                   onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
-                  className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
+                  className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
                 >
                   We have been working on a variety of projects and across
                   different industries across disciplines, making our work an
@@ -77,7 +77,7 @@ const Expertise = () => {
                       onMouseLeave={() =>
                         handleMouseOverBg && handleMouseOverBg()
                       }
-                      className="font-light md:text-2xl lg:leading-[3rem] leading-[2rem]"
+                      className="font-light md:text-2xl 2xl:text-3xl lg:leading-[3rem] leading-[2rem]"
                       key={i}
                     >
                       {item}
