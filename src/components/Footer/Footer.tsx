@@ -22,6 +22,7 @@ const Footer = () => {
   return (
     <section>
       <div
+      // id="sectionWithWhiteBg"
         data-aos="fade-up"
         onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}

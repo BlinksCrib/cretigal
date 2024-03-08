@@ -69,11 +69,43 @@ const Navbar = () => {
             }`}
             onClick={updateMenu}
           >
-            <i
-              onMouseEnter={() => handleMouseNav()}
-              onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
-              className={`fa-solid ${isMenuClicked ? "fa-times" : "fa-bars"}`}
-            ></i>
+            {isMenuClicked ? (
+              <i
+                onMouseEnter={() => handleMouseNav()}
+                onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+                className="fa-solid fa-times"
+              ></i>
+            ) : (
+              <svg
+                onMouseEnter={() => handleMouseNav()}
+                onMouseLeave={() => handleMouseOverBg && handleMouseOverBg()}
+                xmlns="http://www.w3.org/2000/svg"
+                width="23px"
+                height="15px"
+                viewBox="0 0 23 15"
+              >
+                <title>menu (2)</title>
+                <desc>Created with Sketch.</desc>
+                <g
+                  id="Brand"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                >
+                  <g id="menu-(2)" stroke="#000000" strokeWidth="2.5">
+                    <line x1="0" y1="1.25" x2="22.5" y2="1.25" id="Path"></line>
+                    <line
+                      x1="0"
+                      y1="13.75"
+                      x2="22.5"
+                      y2="13.75"
+                      id="Path"
+                    ></line>
+                  </g>
+                </g>
+              </svg>
+            )}
             <h4
               className="md:ml-4 ml-2"
               onMouseEnter={() => handleMouseNav()}

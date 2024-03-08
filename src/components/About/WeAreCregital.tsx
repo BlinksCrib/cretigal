@@ -18,7 +18,7 @@ const WeAreCregital = () => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full bg-[#ffffff]">
+      <div id="sectionWithWhiteBg" className="sectionWithWhiteBg flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center lg:max-w-[1140px] w-[90%] flex-col lg:pt-[6rem] llg:pt-[4rem]">
           <aside data-aos="fade-up" className="text-center lg:w-[75%] flex justify-center items-center flex-col">
             <h1

@@ -78,11 +78,11 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full bg-[#ffffff]">
+      <div id="sectionWithWhiteBg" className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center text-center xl:max-w-[1140px] w-[90%] flex-col">
           <aside
             data-aos="fade-up"
-            className="text-center md:max-w-[768px] 2xl:max-w-[1140px] h-night flex justify-center items-center sm:pt-0 llg:pt-[4rem]"
+            className="text-center md:max-w-[768px] 2xl:max-w-[1140px] h-night flex justify-center items-center"
           >
             <div>
               <h1
@@ -135,14 +135,6 @@ const Hero = () => {
           </aside>
         </div>
       </div>
-      {/* Cursor */}
-      {/* <motion.div
-        className="cursor flex justify-center items-center"
-        variants={variants}
-        animate={cursorVariant}
-        // initial={cursorVariant}
-      ></motion.div> */}
-      {/* <Cursor cursorVariant={cursorVariant} /> */}
     </section>
   );
 };

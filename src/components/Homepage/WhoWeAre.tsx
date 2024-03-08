@@ -21,7 +21,7 @@ const WhoWeAre = () => {
 
   return (
     <section>
-      <div className="flex justify-center items-center w-full bg-[#ffffff]">
+      <div id="sectionWithWhiteBg" className="flex justify-center items-center w-full bg-[#ffffff]">
         <div className="flex justify-center items-center flex-col lg:max-w-[1140px] w-[90%] 2xl:pt-[11rem] lg:pt-[8rem] pt-[4rem]">
           <aside data-aos="fade-up" className="flex flex-col w-full">
             <div>

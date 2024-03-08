@@ -17,7 +17,7 @@ function App() {
   const { cursorVariant } = useAppContext() ?? {};
   return (
     <>
-      <div>
+      <div className="sectionWithWhiteBg">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,8 +25,8 @@ function App() {
           <Route path="/work" element={<OurWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        {window.innerWidth >= 992 && <WriteIcon />}
         {location.pathname === "/contact" ? <></> : <Footer />}
+        {window.innerWidth >= 992 && <WriteIcon />}
         {window.innerWidth >= 992 && <Cursor cursorVariant={cursorVariant} />}
       </div>
     </>

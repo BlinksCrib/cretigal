@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppContext } from "../ContextApi.tsx/ContextApi";
 
-import AOS from "aos"
+import AOS from "aos";
 
 const Expertise = () => {
   const context = useAppContext();
@@ -35,6 +35,7 @@ const Expertise = () => {
   return (
     <section>
       <div
+        id="sectionWithWhiteBg"
         onMouseEnter={() => handleMouseOverBg && handleMouseOverBg()}
         onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
         className="flex justify-center items-center w-full bg-[#000000] text-[#ffffff]"
