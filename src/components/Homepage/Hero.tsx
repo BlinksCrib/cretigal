@@ -82,7 +82,7 @@ const Hero = () => {
         <div className="flex justify-center items-center text-center xl:max-w-[1140px] w-[90%] flex-col">
           <aside
             data-aos="fade-up"
-            className="text-center md:max-w-[768px] 2xl:max-w-[1140px] h-night flex justify-center items-center"
+            className="text-center md:max-w-[768px] lg:max-w-[992px] sm:max-w-[576px] 2xl:max-w-[1140px] h-nights flex justify-center items-center"
           >
             <div>
               <h1
@@ -90,7 +90,7 @@ const Hero = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="font-semibold lg:text-8xl 2xl:text-[8.5rem] 2xl:leading-[9rem] sm:text-5xl text-3xl lg:leading-[7rem] sm:leading-[4rem] mb-6 text-[#000000]"
+                className="font-semibold lg:text-8xl 2xl:text-[8.5rem] 2xl:leading-[10rem] sm:text-6xl text-3xl lg:leading-[7rem] sm:leading-[5rem] md:text-7xl md:leading-[5.5rem] mb-6 text-[#000000]"
               >
                 Cregital designs & builds digital experiences
               </h1>
@@ -99,7 +99,7 @@ const Hero = () => {
                   handleMouseOverText && handleMouseOverText()
                 }
                 onMouseLeave={() => handleMouseLeave && handleMouseLeave()}
-                className="text-3xl text-light"
+                className="lg:text-3xl lg:leading-[3rem] 2xl:text-2xl md:text-2xl sm:text-lg text-light"
               >
                 We design, build and launch websites and products that are
                 simple, beautiful and helps businesses grow.

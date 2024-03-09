@@ -26,7 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         {location.pathname === "/contact" ? <></> : <Footer />}
-        {window.innerWidth >= 992 && <WriteIcon />}
+        {window.innerWidth >= 768 && <WriteIcon />}
         {window.innerWidth >= 992 && <Cursor cursorVariant={cursorVariant} />}
       </div>
     </>

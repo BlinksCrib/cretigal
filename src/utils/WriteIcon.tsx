@@ -56,7 +56,7 @@ const WriteIcon = () => {
     <section className="bg-[#000000]">
       {location.pathname !== "/contact" && (
         <div
-          className="fixed bottom-[30px] right-[30px] z-[1000]"
+          className="fixed bottom-[20px] right-[30px] z-[1000]"
           style={{ mixBlendMode }}
         >
           {/* Add your icon or content here */}
